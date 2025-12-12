@@ -4,7 +4,7 @@ date : 13/12/2025
 #Charif houria manal 
 #Zemmit bouchra  
 import pandas as pd 
-#1) Créer le tableau de séquences ADN
+# 1) Créer le tableau de séquences ADN
 data = { "Séquence": [ "ATGCGTACGTA", "GCTAGCTAGGCC", "ATGCCGGTAAAGT", "TACGATCGTA","ATGAAAGGCTT", "CGTACGTAGC", "TTAACCGGAT" ],
          "Longueur": [12, 12, 12, 10, 11, 10, 10], 
          "Pourcentage_GC": [50, 66.67, 58.33, 40, 45.45, 60, 50] 
