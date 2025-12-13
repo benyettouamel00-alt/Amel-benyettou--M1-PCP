@@ -23,3 +23,14 @@ print(df[df["Longueur"] > 10], "\n")
 # 4) Calculer le %GC moyen avec 3 chiffres après la virgule
 gc_mean = round(df["Pourcentage_GC"] -mean),
 print("pourcentage moyen de GC :",gc mean ,"\n")
+
+# 5) ajouter une colonne "categorie GC"
+def categorie_gc(gc):
+ if gc > 55:return "Riche"
+ elif 45 <=gc <=55: return "moyen"
+ else:return "faible" 
+df["categorie_GC"] = df[" pourcentage_GC"].apply(categorie_gc)
+
+# 6) ajouter une colonne donnant le nombre de G
+df["NB_G"] = df["sequence"]. apply(lambda seq : seq.count("G"))
+
