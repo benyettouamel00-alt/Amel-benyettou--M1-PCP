@@ -34,3 +34,13 @@ df["categorie_GC"] = df[" pourcentage_GC"].apply(categorie_gc)
 # 6) ajouter une colonne donnant le nombre de G
 df["NB_G"] = df["sequence"]. apply(lambda seq : seq.count("G"))
 
+# 7) Calculer l'écart-type du %GC et de la longueur
+ecart_type_gc = df["Pourcentage_GC"].std()
+ecart_type_longueur = df["Longueur"].std()
+print("Écart-type du %GC :", round(ecart_type_gc, 3))
+print("Écart-type de la longueur :", round(ecart_type_longueur, 3), "\n")
+
+# 8) Sauvegarder le tableau final dans un fichier CSV
+df.to_csv("resultat_sequences_ADN.csv", index=False)
+print("Le tableau final a été sauvegardé dans 'resultat_sequences_ADN.csv'.")
+print(df) 
